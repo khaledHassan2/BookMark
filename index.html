@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMark</title>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <div id="window"onclick="closeWindow()" class="info min-vh-100 w-100 d-flex justify-content-center align-items-center position-absolute d-none">
+    <div class="alert-contaner bg-white w-50 p-5 rounded-2 position-relative">
+        <button type="button" class="btn-close mb-3 position-absolute text-black"></button>
+        <h2 class="h4"><i class="fa-solid fa-circle-exclamation pe-2 text-warning"></i>Site Name or Url is not valid, Please follow the rules below :</h2>
+        <h3 class="h6"><i class="fa-regular fa-hand-point-right text-danger fw-bold pe-2"></i>Site name must contain at least 2 characters TO 150</h3>
+        <h3 class="h6"><i class="fa-regular fa-hand-point-right text-danger fw-bold pe-2"></i>Site Url must start with http:// or https:// or www.</h3>
+     </div>
+   </div>
+     </div>
+   </div>
+    <section class="container py-5 text-capitalize">
+        <div class="text-center pb-5"><h1>Bookmarker</h1></div>
+        <div class="bode ">
+            <h2 class="text-center mt-3 h3"><i class="fa-solid fa-bookmark mx-2"></i>Bookmark your favorite sites<i class="fa-solid fa-bookmark mx-2"></i> </h2>
+            <label for="name" class="mb-2 fw-bold"><i class="fas fa-book-bookmark pe-2"></i> Site Name</label>
+            <input oninput="validation(this)" id="name" class="form-control mb-4 " type="text"placeholder="Book Mark Name">
+            <label for="url" class="mb-2 fw-bold"><i class="fas fa-link pe-2"></i> Site URL </label>
+            <input oninput="validation(this)" id="url" class="form-control mb-4" type="text"placeholder="Website URL">
+            <div class="text-center"><button onclick="bookMark()" class="btn btn-warning mb-4 w-25">submit</button></div>
+        </div>
+        <table class="table table-warning text-center mt-3">
+  <thead>
+    <tr>
+        <th>Index</th>
+        <th>Website Name</th>
+        <th>Visit</th>
+        <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody id="tbody">
+    
+  </tbody>
+</table>
+    </section>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
